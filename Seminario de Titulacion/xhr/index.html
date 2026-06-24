@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>xhr.status</title>
+    <link rel="stylesheet" href="styles.css">
+
+    <style type="text/css">
+        /* Estilos generales */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+/* Estilos del encabezado */
+header {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 1rem 0;
+}
+
+/* Estilos del contenido principal y la barra lateral */
+.content {
+    display: flex;
+    flex-direction: row-reverse;
+}
+
+/* Estilos del artículo principal */
+.main-article {
+    flex: 1; /* Ocupa todo el espacio restante */
+    padding: 20px;
+}
+
+/* Estilos de la barra lateral  */
+.sidebar {
+    width: 200px;
+    background-color: #444;
+    color: #fff;
+    padding: 20px;
+}
+
+.sidebar nav ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.sidebar nav ul li {
+    margin-bottom: 10px;
+}
+
+.sidebar nav ul li a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.sidebar nav ul li a:hover {
+    text-decoration: underline;
+}
+
+/* Estilos del pie de página */
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 1rem 0;
+}
+    </style>
+
+</head>
+<body>
+    <header>
+        <h1>(¯`·.¸¸.·´¯`·.¸¸.-> 𝑨𝑷𝑰 𝒅𝒆 𝑿𝑴𝑳𝑯𝒕𝒕𝒑/𝒙𝒉𝒓.𝒔𝒕𝒂𝒕𝒖𝒔 <-.¸¸.·´¯`·.¸¸.·´¯)</h1>
+    </header>
+    
+    <div class="content">
+        <article class="main-article">
+            <center>
+            <h2>XMLHttpRequest</h2><br><br><br>
+
+            <img src="img2.png"> <br><br>
+
+            XMLHttpRequestLos objetos (XHR) se utilizan para interactuar con los servidores. Puede recuperar datos de una URL sin tener que actualizar toda la página. Esto permite que una página web actualice solo una parte de la página sin interrumpir lo que está haciendo el usuario.<br><br><br>
+
+            <img src="img1.png">
+            <br><br>
+            A pesar de su nombre, XMLHttpRequestse puede utilizar para recuperar cualquier tipo de datos, no sólo XML.<br><br>
+
+            Si su comunicación requiere recibir datos de eventos o mensajes de un servidor, considere la posibilidad de utilizar eventos enviados por el servidor a través de la EventSourceinterfaz. Para una comunicación full-duplex, WebSockets puede ser una mejor opción.<br><br><br><br>
+
+            <h2>Constructor</h2><br><br><br>
+            XMLHttpRequest()
+            El constructor inicializa un método XMLHttpRequest. Debe llamarse antes de cualquier otra llamada de método.<br><br><br>
+
+            <h2>Propiedades de instancia</h2><br><br>
+            Esta interfaz también hereda las propiedades de XMLHttpRequestEventTargety de EventTarget.<br><br>
+            <font color="blue">  XMLHttpRequest.readyState</font> <br>
+            Devuelve un número que representa el estado de la solicitud.<br><br>
+            <font color="blue"> XMLHttpRequest.response </font> <br>
+            Devuelve un ArrayBuffer, un Blob, un Document, un objeto JavaScript o una cadena, según el valor de XMLHttpRequest.responseType, que contiene el cuerpo de la entidad de respuesta.<br><br>
+            <font color="blue">XMLHttpRequest.responseText</font><br>
+            Devuelve una cadena que contiene la respuesta a la solicitud como texto, o nullsi la solicitud no tuvo éxito o aún no se ha enviado.<br><br>
+            <font color="blue">XMLHttpRequest.responseType</font><br>
+            Especifica el tipo de respuesta.<br><br>
+            <font color="blue">XMLHttpRequest.responseURL</font><br>
+            Devuelve la URL serializada de la respuesta o la cadena vacía si la URL es nula.<br><br>
+            <font color="blue">XMLHttpRequest.responseXML</font><br>
+            Devuelve un Documentque contiene la respuesta a la solicitud, o nullsi la solicitud no se realizó correctamente, aún no se envió o no se puede analizar como XML o HTML. No disponible en Web Workers .<br><br>
+            <font color="blue">XMLHttpRequest.status</font><br>
+            Devuelve el código de estado de respuesta HTTP de la solicitud.<br><br>
+            <font color="blue">XMLHttpRequest.statusText</font><br>
+            Devuelve una cadena que contiene la cadena de respuesta devuelta por el servidor HTTP. A diferencia de XMLHttpRequest.status, esto incluye el texto completo del mensaje de respuesta (" OK", por ejemplo).<br><br><br>
+            
+            <img src="img3.png"><br><br>
+             
+             <font color="blue">XMLHttpRequest.timeout</font><br>
+             El tiempo en milisegundos que puede tardar una solicitud antes de finalizar automáticamente.<br><br>
+            <font color="blue">XMLHttpRequest.upload</font><br>
+            A XMLHttpRequestUploadrepresenta el proceso de carga.<br><br>
+            <font color="blue">XMLHttpRequest.withCredentials</font><br>
+            Devuelve truesi las solicitudes entre sitios Access-Controldeben realizarse utilizando credenciales como cookies o encabezados de autorización; de lo contrario false, .<br><br>
+
+            <h2>Propiedades no estándar</h2><br><br><br>
+
+            <font color="blue">XMLHttpRequest.channel</font><br>
+            El canal utilizado por el objeto al realizar la solicitud<br><br>
+            <font color="blue">XMLHttpRequest.mozAnon</font><br>
+            Un valor booleano. Si es verdadero, la solicitud se enviará sin encabezados de autenticación ni cookies.<br><br>
+            <font color="blue">XMLHttpRequest.mozSystem</font><br>
+            Un valor booleano. Si es verdadero, no se aplicará la misma política de origen en la solicitud.<br><br>
+            <font color="blue">XMLHttpRequest.mozBackgroundRequest</font><br>
+            Un valor booleano que indica si el objeto representa o no una solicitud de servicio en segundo plano.<br><br><br>
+
+            <h2>Métodos de instancia</h2><br><br>
+
+            <font color="blue">XMLHttpRequest.abort()</font><br>
+            Aborta la solicitud si ya ha sido enviada.<br><br>
+            <font color="blue">XMLHttpRequest.getAllResponseHeaders()</font><br>
+            Devuelve todos los encabezados de respuesta, separados por CRLF , como una cadena, o nullsi no se ha recibido respuesta.<br><br>
+            <font color="blue">XMLHttpRequest.getResponseHeader()</font><br>
+            Devuelve la cadena que contiene el texto del encabezado especificado, o nullsi aún no se ha recibido la respuesta o el encabezado no existe en la respuesta.<br><br>
+            <font color="blue">XMLHttpRequest.open()</font><br>
+            Inicializa una solicitud.<br><br>
+            <font color="blue">XMLHttpRequest.overrideMimeType()</font><br>
+            Anula el tipo MIME devuelto por el servidor.<br><br>
+            <font color="blue">XMLHttpRequest.send()</font><br>
+            Envía la solicitud. Si la solicitud es asincrónica (que es la opción predeterminada), este método retorna tan pronto como se envía la solicitud.<br><br>
+            <font color="blue">XMLHttpRequest.setAttributionReporting()</font><br>
+            Indica que desea que la respuesta de la solicitud pueda registrar una fuente de atribución o un evento desencadenador.<br><br>
+            <font color="blue">XMLHttpRequest.setRequestHeader()</font><br>
+            Establece el valor de un encabezado de solicitud HTTP. Debe llamar setRequestHeader()después de open(), pero antes de send().<br><br>
+
+            <h2>Eventos</h2><br><br>
+
+            <font color="blue">abort</font><br>
+            Se activa cuando se canceló una solicitud, por ejemplo, porque el programa llamó a XMLHttpRequest.abort(). También está disponible a través de la onabortpropiedad del controlador de eventos.<br><br>
+            <font color="blue">error</font><br>
+            Se activa cuando la solicitud detecta un error. También está disponible a través de la onerrorpropiedad del controlador de eventos.<br><br>
+            <font color="blue">load</font><br>
+            Se activa cuando una XMLHttpRequesttransacción se completa correctamente. También está disponible a través de la onloadpropiedad del controlador de eventos.<br><br>
+            <font color="blue">loadend</font><br>
+            Se activa cuando se completa una solicitud, ya sea de manera exitosa (después de load) o sin éxito (después de aborto error). También está disponible a través de la onloadendpropiedad del controlador de eventos.<br><br>
+            <font color="blue">loadstart</font><br>
+            Se activa cuando una solicitud ha comenzado a cargar datos. También está disponible a través de la onloadstartpropiedad del controlador de eventos.<br><br>
+            <font color="blue">progress</font><br>
+            Se activa periódicamente cuando una solicitud recibe más datos. También está disponible a través de la onprogresspropiedad del controlador de eventos.<br><br>
+            <font color="blue">readystatechange</font><br>
+            Se activa siempre que cambia la readyStatepropiedad. También está disponible a través de la onreadystatechangepropiedad del controlador de eventos.<br><br>
+            <font color="blue">timeout</font><br>
+            Se activa cuando se termina el progreso debido a que se vence el tiempo predeterminado. También está disponible a través de la ontimeoutpropiedad del controlador de eventos.<br><br>
+
+            <h2>Especificaciones</h2>
+            <font color="blue">Especificaciones:  <a  href="https://xhr.spec.whatwg.org/#interface-xmlhttprequest
+            ">https://xhr.spec.whatwg.org/#interface-xmlhttprequest</a>  </font>
+
+
+           
+            </center>
+        </article>
+
+        <menu class="sidebar">
+            <nav>
+
+                <font color="white" size="3"> Contenido</font>
+                <br><br><br>
+                <div class="dropdown">
+                    <button>XMLHttpRequest</button><br><br><br>
+                    <button>Constructor</button><br><br><br>
+                    <button>Propiedades de instancia</button><br>
+                    <div class="dropdown-content">
+                        <a href="#"><font color="white" size="1"> XMLHttpRequest.readyState</font></a><br>
+                        <a href="#"><font color="white" size="1"> XMLHttpRequest.response</font></a><br>
+                        <a href="#"><font color="white" size="1"> XMLHttpRequest.responseText</font></a><br>
+                        <a href="#"><font color="white" size="1"> XMLHttpRequest.responseType</font></a><br>
+                        <a href="#"><font color="white" size="1"> XMLHttpRequest.responseURL</font></a><br>
+                        <a href="#"><font color="white" size="1"> XMLHttpRequest.responseXML</font></a><br>
+                        <a href="#"><font color="white" size="1"> XMLHttpRequest.status<</font> </a><br>
+                        <a href="#"><font color="white" size="1"> XMLHttpRequest.statusText<</font> </a><br>
+                        <a href="#"><font color="white" size="1"> XMLHttpRequest.timeout</font> </a><br>
+                        <a href="#"><font color="white" size="1"> XMLHttpRequest.upload</font> </a><br>
+                        <a href="#"><font color="white" size="1"> XMLHttpRequest.withCredentials</font> </a><br><br><br>
+                    </div>
+
+                    <button>Propiedades no estandár</button><br>
+                    <div class="dropdown-content">
+                        <a href="#"><font color="white" size="1"> XMLHttpRequest.channel</font> </a><br>
+                        <a href="#"><font color="white" size="1"> XMLHttpRequest.mozAnon</font> </a><br>
+                        <a href="#"><font color="white" size="1"> XMLHttpRequest.mozSystem</font> </a><br>
+                        <a href="#"><font color="white" size="1"> XMLHttpRequest.mozBackgroundRequest</font> </a><br><br><br>
+                    </div>
+
+                    <button>Métodos de instancia</button><br>
+                    <div class="dropdown-content">
+                        <a href="#"><font color="white" size="1"> XMLHttpRequest.abort()</font> </a><br>
+                        <a href="#"><font color="white" size="1"> XMLHttpRequest.getAllResponseHeaders()</font> </a><br>
+                        <a href="#"><font color="white" size="1"> XMLHttpRequest.getResponseHeader()</font> </a><br>
+                        <a href="#"><font color="white" size="1"> XMLHttpRequest.open()</font> </a><br>
+                        <a href="#"><font color="white" size="1"> XMLHttpRequest.overrideMimeType()</font> </a><br>
+                        <a href="#"><font color="white" size="1"> XMLHttpRequest.send()</font> </a><br>
+                        <a href="#"><font color="white" size="1"> XMLHttpRequest.setAttributionReporting()</font> </a><br>
+                        <a href="#"><font color="white" size="1"> XMLHttpRequest.setRequestHeader()</font> </a><br><br><br>
+                    </div>
+
+                    <button>Eventos</button><br>
+                    <div class="dropdown-content">
+                        <a href="#"><font color="white" size="1"> abort</font> </a><br>
+                        <a href="#"><font color="white" size="1"> error</font> </a><br>
+                        <a href="#"><font color="white" size="1"> load</font> </a><br>
+                        <a href="#"><font color="white" size="1"> loadend</font> </a><br>
+                        <a href="#"><font color="white" size="1"> loadstart</font> </a><br>
+                        <a href="#"><font color="white" size="1"> progress</font> </a><br>
+                        <a href="#"><font color="white" size="1"> readystatechange</font> </a><br>
+                        <a href="#"><font color="white" size="1"> timeout</font> </a><br><br><br>
+                    </div>
+                    <button>Especificaciones</button>
+                    <div class="dropdown-content">
+                        <a href="#"><font color="white" size="1"> Especificaciones</font> </a>
+                    </div>
+                    
+                </div>
+            
+            </nav>
+        </menu>
+    </div>
+
+    <footer>
+        <p>Colegio de Estudios Cientificos y Tecnologicos del Estado De México (CECYTEM) </p>
+        <p>Pagina Elaborada por: Eder Saúl Piña Rosales </p>
+        <p>Pie de Página &copy; 2024</p>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Transparencia</title>
+
+    <style type="text/css">
+    	img{
+			width: 250px;
+			margin: 5px auto;
+		}
+		footer {
+			background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 1rem 0;
+        }
+
+		.img1 {
+			width: 50px;
+			height: 60px;
+		}
+
+		.img2:hover{
+			filter: opacity(20%) drop-shadow(8px 8px blue);
+		}
+		.img3:hover{
+			filter: saturate(80%) drop-shadow(8px 8px blue);
+		}
+		.img4:hover{
+			filter: opacity(80%) box-shadow(8px 8px blue);
+		}
+		.img5:hover{
+			filter: saturate(20%) box-shadow(8px 8px blue);
+		}
+    </style>
+
+</head>
+<body>
+
+	<header>
+
+    <center>
+    <table width='100%' border='2'>
+      <tr>
+        <td bgcolor='#e9ffc7' align='center' width="160"><img class="img1" src='img.png'></td>
+        <td  valign='center' bgcolor='#e9ffc7'><font color="green" size='20'><center><b>𝓒𝓾𝓻𝓼𝓸 𝓓𝓮 𝓣𝓲𝓽𝓾𝓵𝓪𝓬𝓲ó𝓷 𝓗𝓣𝓜𝓛5</center></td>
+      </tr>
+    </table>
+    </center>
+
+  </header>
+
+  <br><br><br>
+  <center>
+  <font size="6" color="#00254d">TRANSPARENCIA</font><br><br>
+  </center>
+
+  <br><br><br>
+
+  <table border="2" align="center" width="80%">
+    	<tr>
+    		<td align="center"> <font color="#19284c" size="10"><b>Codigo </b> </font> </td>
+    		<td align="center"> <font color="#19284c" size="10"><b>Descripción</b> </font> </td>
+    		<td align="center"> <font color="#19284c" size="10"><b>Ejemplo</b> </font> </td>
+    	</tr>
+
+        <tr>
+        	<td align="left"><font>.img2:hover{<br>filter: opacity(20%) drop-shadow(8px 8px blue);<br> }</font> </td>
+        	<td align="center"><font>Resultado:<br><br>
+        		Cuando el usuario pasa el mouse sobre el elemento con la clase .img2 (en este caso, un div con fondo amarillo), ocurrirán dos cosas:<br><br>
+        		La opacidad del elemento se reducirá al 20%, haciendo que se vuelva ligeramente transparente.<br>
+        		Se añadirá una sombra azul con un desplazamiento de 8 píxeles en ambas direcciones (horizontal y vertical).<br><br>
+        		Este efecto es útil para proporcionar realimentación visual cuando el usuario interactúa con elementos en la página web, haciendo que la experiencia de usuario sea más dinámica y atractiva.</font> </td>
+        	<td align="left"><img class="img2" src="img.png"></td>
+        </tr>
+
+        <tr>
+        	<td align="left"> <font>.img3:hover{<br>filter: saturate(80%) drop-shadow(8px 8px blue);<br>}</font> </td>
+        	<td align="center"> <font>Resultado:<br><br>
+        		Cuando el usuario pasa el mouse sobre el elemento con la clase .img3 (en este caso, un div con fondo amarillo), ocurrirán dos cosas:<br><br>
+                La saturación del elemento se aumentará al 80%, haciendo que los colores sean más intensos y vibrantes.<br>
+                Se añadirá una sombra azul con un desplazamiento de 8 píxeles en ambas direcciones (horizontal y vertical).<br><br>
+                Este efecto es útil para destacar visualmente elementos en respuesta a la interacción del usuario, mejorando la experiencia visual y la interactividad en la página web.</font> </td>
+        	<td align="center"> <img class="img3" src="img.png"> </td>
+        </tr>
+
+        <tr>
+        	<td align="left"><font> .img4:hover{<br>filter: opacity(80%) box-shadow(8px 8px blue);<br> }</font> </td>
+        	<td align="center"><font>Resultado:<br><br>
+        		Cuando el usuario pasa el mouse sobre el elemento con la clase .img4 (en este caso, un div con fondo amarillo), ocurrirán dos cosas:<br><br>
+                La opacidad del elemento se reducirá al 80%, haciendo que se vuelva ligeramente transparente.<br>
+                Se añadirá una sombra azul alrededor del borde del elemento con un desplazamiento de 8 píxeles en ambas direcciones (horizontal y vertical).<br><br>
+                Este efecto combinado de opacidad reducida y sombra añadida ayuda a resaltar visualmente el elemento cuando el usuario interactúa con él, proporcionando una experiencia de usuario más dinámica y atractiva en la página web.</font> </td>
+        	<td align="center"><img class="img4" src="img.png"> </td>
+        </tr>
+
+        <tr>
+        	<td align="left"><font> .img5:hover{<br>filter: saturate(20%) box-shadow(8px 8px blue);<br> }</font> </td>
+        	<td align="center"><font>Resultado:<br><br>
+        		Cuando el usuario pasa el mouse sobre el elemento con la clase .img5 (en este caso, un div con fondo amarillo), ocurrirán dos cosas:<br><br>
+                La saturación del elemento se reducirá al 20%, haciendo que los colores sean menos vibrantes.<br>
+                Se añadirá una sombra azul alrededor del borde del elemento con un desplazamiento de 8 píxeles en ambas direcciones (horizontal y vertical).<br><br>
+                Este efecto combinado de saturación reducida y sombra añadida ayuda a resaltar visualmente el elemento cuando el usuario interactúa con él, proporcionando una experiencia de usuario más dinámica y atractiva en la página web.</font> </td>
+        	<td align="center"><img class="img5" src="img.png"> </td>
+        </tr>
+
+    </table> <br><br><br>
+
+    <footer>
+        <p>Colegio de Estudios Cientificos y Tecnologicos del Estado De México (CECYTEM) </p>
+        <p>Pagina Elaborada por: Eder Saúl Piña Rosales </p>
+        <p>Pie de Página &copy; 2024</p>
+    </footer>
+
+</body>
+</html>

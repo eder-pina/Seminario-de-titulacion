@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Overflow</title>
+<link rel="stylesheet" href="styles.css">
+
+<style type="text/css">
+  
+  body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  width: 300px;
+  height: 200px;
+  overflow: visible; /* Este es el estilo que permite que el contenido desborde */
+  padding: 20px;
+}
+
+.content {
+  background-color: red;
+  padding: 10px;
+}
+
+p {
+  margin: 0;
+  overflow: visible;
+  border: dotted;
+}
+
+.p2 {
+  margin: 0;
+  overflow: hidden;
+  border: solid;
+}
+
+.p3 {
+  margin: 0;
+  overflow: scroll;
+  border: dashed;
+}
+
+.p4 {
+  margin: 0;
+  overflow: auto;
+  border: double;
+}
+
+.p5{
+  border: none;
+}
+
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 1rem 0;
+    border: none;
+}
+
+</style>
+
+</head>
+<body>
+
+  <header>
+
+    <center>
+    <table width='100%' border='2'>
+      <tr>
+        <td bgcolor='#e9ffc7' align='center' width="160"><img src='img.png' width="80px" height="90px"></td>
+        <td  valign='center' bgcolor='#e9ffc7'><font color="green" size='20'><center><b>𝓒𝓾𝓻𝓼𝓸 𝓓𝓮 𝓣𝓲𝓽𝓾𝓵𝓪𝓬𝓲ó𝓷 𝓗𝓣𝓜𝓛5</center></td>
+      </tr>
+    </table>
+    </center>
+
+  </header>
+  <br><br><br>
+  <center>
+  <font size="6" color="#00254d">O̳V̳E̳R̳F̳L̳O̳W̳</font><br><br>
+
+  <table border="6" bordercolor="blue" width="80%">
+    <tr>
+      <td><font size="4"><b> Valores </b></font></td>
+      <td><font size="4"><b> Definición </b></font></td>
+      <td><font size="4"><b> Codigo</b> </font></td>
+      <td><font size="4"><b> Ejemplo</b> </font></td>
+    </tr>
+
+    <tr>
+      <td><font size="3">overflow: visible</font> </td>
+      <td>Valor por defecto. El contenido no es recortado, podría ser dibujado fuera de la caja contenedora. </td>
+      <td><img src="visible.png" width="350px" height="150px"> </td>
+      <td>
+        <div class="container">
+          <div class="content">
+            <p>Para estructurar un cronograma basado en las 14 progresiones del pensamiento matematico, es importante diseñar un plan que permita a los estudiantes desarrollar sus habilidades de manera gradual y coherente</p>
+          </div>
+        </div>
+      </td>
+    </tr>
+
+    <tr>
+      <td><font size="3">overflow: hidden</font> </td>
+      <td>El contenido es recortado y no se muestran barras de posición. </td>
+      <td><img src="hidden.png" width="350px" height="150px"> </td>
+      <td>
+        <div class="container">
+          <div class="content">
+            <p class="p2">Para estructurar un cronograma basado en las 14 progresiones del pensamiento matematico, es importante diseñar un plan que permita a los estudiantes desarrollar sus habilidades de manera gradual y coherente</p>
+          </div>
+        </div>
+      </td>
+    </tr>
+
+    <tr>
+      <td><font size="3">overflow: scroll</font> </td>
+      <td>El contenido es recortado y el navegador web usa las barras de desplazamiento, se haya recortado contenido o no. Esto previene cualquier problema con las barras de desplazamiento apareciendo o desapareciendo en un entorno dinámico. Puede que las impresoras impriman contenido excedente.</td>
+      <td><img src="scroll.png" width="350px" height="150px"> </td>
+      <td>
+        <div class="container">
+          <div class="content">
+            <p class="p3">Para estructurar un cronograma basado en las 14 progresiones del pensamiento matematico, es importante diseñar un plan que permita a los estudiantes desarrollar sus habilidades de manera gradual y coherente</p>
+          </div>
+        </div>
+      </td>
+    </tr>
+      
+    <tr>
+      <td><font size="3">overflow: auto</font> </td>
+      <td>Depende del agente de usuario. Navegadores de escritorio como Firefox proveen barras de desplazamiento si hay contenido excedente.</td>
+      <td><img src="auto.png" width="350px" height="150px"> </td>
+      <td>
+        <div class="container">
+          <div class="content">
+            <p class="p4">Para estructurar un cronograma basado en las 14 progresiones del pensamiento matematico, es importante diseñar un plan que permita a los estudiantes desarrollar sus habilidades de manera gradual y coherente</p>
+          </div>
+        </div>
+      </td>
+    </tr>
+
+  </table>
+  </center>
+  <br><br>
+
+    <footer>
+        <p class="p5">Colegio de Estudios Cientificos y Tecnologicos del Estado De México (CECYTEM) </p>
+        <p class="p5">Pagina Elaborada por: Eder Saúl Piña Rosales </p>
+        <p class="p5">Pie de Página &copy; 2024</p>
+    </footer>
+
+</body>
+</html>

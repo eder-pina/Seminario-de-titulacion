@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Maquetación con CSS Grid</title>
+    <style>
+
+        .item1 { grid-area: header; }
+        .item2 { grid-area: menu; }
+        .item3 { grid-area: main; }
+        .item4 { grid-area: right; }
+        .item5 { grid-area: footer; }
+
+        .grid-container {
+            display: grid;
+            grid-template-areas:
+                "header header header"
+                "menu main right"
+                "footer footer footer";
+            grid-gap: 10px;
+            padding: 10px;
+        }
+
+        .grid-container > div {
+            background-color: rgba(255, 255, 255, 0.8);
+            text-align: center;
+            padding: 20px 0;
+            font-size: 30px;
+        }
+
+        table{
+          width: 900px;
+          height: 450px;
+          align-content: center;
+        }
+
+
+
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        h1, p {
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+
+<h1>The grid-area Property</h1>
+
+<p>La propiedad `grid-area` también se puede utilizar para asignar nombres a elementos de la cuadrícula.</p>
+
+<div class="grid-container">
+  <table border="2" align="center" bgcolor="#7986cb">
+    <tr>
+    <td bgcolor="#e8eaf6" colspan="3"  align="center"> <div class="item1">ENCABEZADO</div> </td>
+    </tr>
+   
+    <tr>
+    <td bgcolor="#e8eaf6" align="center" rowspan="2"> <div class="item2">Menú</div></td>
+    <td bgcolor="#e8eaf6" align="center"> <div class="item3">CONTENIDO</div></td>
+    <td bgcolor="#e8eaf6" align="center"> <div class="item4">Derecha</div></td>
+    </tr>
+
+    <tr>
+    <td bgcolor="#e8eaf6" align="center" colspan="2"><div class="item5">Pie de Página</div></td> 
+    </tr>
+  </table>
+</div>
+
+</body>
+</html>
